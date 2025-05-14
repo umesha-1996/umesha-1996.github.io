@@ -42,6 +42,7 @@
       padding: 0.75rem;
       margin-bottom: 1rem;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     .img-card:hover {
       transform: scale(1.02);
@@ -55,6 +56,11 @@
       text-align: center;
       font-size: 0.9rem;
       color: #bbb;
+    }
+    .modal-img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
     }
   </style>
 </head>
@@ -72,24 +78,24 @@
 
     <h2 class="section-title">🖼️ Wagtail Admin Panel Screenshots</h2>
     <div class="row">
-      <div class="col-md-6 img-card"><img src="assets/admin_home_page.JPG" alt="Wagtail Home Page"></div>
-      <div class="col-md-6 img-card"><img src="assets/admin_home_page_2.JPG" alt="Wagtail Home Page 2"></div>
-      <div class="col-md-6 img-card"><img src="assets/admin_footer.JPG" alt="Wagtail Footer"></div>
-      <div class="col-md-6 img-card"><img src="assets/admin_contactus_page.JPG" alt="Wagtail Contact Page"></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/admin_home_page.JPG')"><img src="assets/admin_home_page.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/admin_home_page_2.JPG')"><img src="assets/admin_home_page_2.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/admin_footer.JPG')"><img src="assets/admin_footer.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/admin_contactus_page.JPG')"><img src="assets/admin_contactus_page.JPG" alt=""></div>
     </div>
 
     <h2 class="section-title">🖼️ Django Admin Panel Screenshots</h2>
     <div class="row">
-      <div class="col-md-6 img-card"><img src="assets/django_admin_contactus.JPG" alt="Django Admin Contact"></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/django_admin_contactus.JPG')"><img src="assets/django_admin_contactus.JPG" alt=""></div>
     </div>
 
     <h2 class="section-title">🖼️ Project Screenshots</h2>
     <div class="row">
-      <div class="col-md-6 img-card"><img src="assets/home_page.JPG" alt="Homepage"></div>
-      <div class="col-md-6 img-card"><img src="assets/home_page_2.JPG" alt="Homepage 2"></div>
-      <div class="col-md-6 img-card"><img src="assets/navbar.JPG" alt="Navbar"></div>
-      <div class="col-md-6 img-card"><img src="assets/footer.JPG" alt="Footer"></div>
-      <div class="col-md-6 img-card"><img src="assets/contact_us.JPG" alt="Contact Page"></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/home_page.JPG')"><img src="assets/home_page.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/home_page_2.JPG')"><img src="assets/home_page_2.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/navbar.JPG')"><img src="assets/navbar.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/footer.JPG')"><img src="assets/footer.JPG" alt=""></div>
+      <div class="col-md-6 img-card" onclick="showImage('assets/contact_us.JPG')"><img src="assets/contact_us.JPG" alt=""></div>
     </div>
 
     <footer>
@@ -97,5 +103,29 @@
     </footer>
   </div>
 
+  <!-- Modal for Image Preview -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-dark border-secondary">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" class="modal-img" src="" alt="Full Size Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    const modalImage = document.getElementById('modalImage');
+
+    function showImage(src) {
+      modalImage.src = src;
+      imageModal.show();
+    }
+  </script>
 </body>
 </html>
