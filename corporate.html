@@ -62,6 +62,32 @@
       max-height: 80vh;
       object-fit: contain;
     }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: none; /* remove default arrow */
+      color: red;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .carousel-control-prev-icon::after {
+      content: '❮'; /* Unicode left arrow */
+      color: red;
+      font-weight: bold;
+    }
+
+    .carousel-control-next-icon::after {
+      content: '❯'; /* Unicode right arrow */
+      color: red;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
