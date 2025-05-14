@@ -14,56 +14,88 @@
       font-family: 'Segoe UI', sans-serif;
     }
     .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
+      max-width: 960px;
+      margin-top: 3rem;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    a.btn-custom {
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 30px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+    }
+    a.btn-custom:hover {
+      background-color: #0b5ed7;
+      transform: scale(1.05);
+    }
+    .img-card {
       background-color: #111;
-      border: 1px solid #444;
+      border: 1px solid #333;
       border-radius: 10px;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
     }
-    h1, h2 {
-      color: #fff;
-    }
-    a.btn {
-      margin-bottom: 1.5rem;
+    .img-card:hover {
+      transform: scale(1.02);
     }
     img {
-      max-width: 100%;
-      border: 1px solid #555;
+      width: 100%;
       border-radius: 8px;
-      margin-bottom: 1rem;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
+    <h1 class="text-center mb-3">💼 Service-Based Corporate Website (Financial)</h1>
+    <p class="lead text-center">A modern corporate website built for a financial services company using <strong>Django</strong>, <strong>Wagtail CMS</strong>, <strong>Python</strong>, and <strong>Tailwind CSS</strong>.</p>
 
-<!--      <h1>💼 Service-Based Corporate Website (Financial)</h1> -->
-    <h1>💼 Service-Based Corporate Website (Financial)</h1>
-    <p>This project is a corporate website for a financial service-based company. It includes a professional header, footer, and a modern homepage using Python, Django, Wagtail CMS, and Tailwind CSS.</p>
+    <div class="text-center mb-4">
+      <a href="https://github.com/umesha-1996/Corporate_site" class="btn btn-custom" target="_blank">
+        <i class="fab fa-github me-2"></i>View GitHub Repository
+      </a>
+    </div>
 
-    <a href="https://github.com/umesha-1996/Corporate_site" class="btn btn-outline-light" target="_blank">
-      <i class="fab fa-github"></i> View GitHub Repository
-    </a>
+    <h2 class="section-title">🖼️ Wagtail Admin Panel Screenshots</h2>
+    <div class="row">
+      <div class="col-md-6 img-card"><img src="assets/admin_home_page.JPG" alt="Wagtail Home Page"></div>
+      <div class="col-md-6 img-card"><img src="assets/admin_home_page_2.JPG" alt="Wagtail Home Page 2"></div>
+      <div class="col-md-6 img-card"><img src="assets/admin_footer.JPG" alt="Wagtail Footer"></div>
+      <div class="col-md-6 img-card"><img src="assets/admin_contactus_page.JPG" alt="Wagtail Contact Page"></div>
+    </div>
 
-        <h2>🖼️ Wagtail Admin Panel Screenshots</h2>
-<img src="assets/admin_home_page.JPG" alt="Homepage Screenshot">
-<img src="assets/admin_home_page_2.JPG" alt="Homepage Screenshot">
-<img src="assets/admin_footer.JPG" alt="Navbar Screenshot">
-<img src="assets/admin_contactus_page.JPG" alt="Footer Screenshot">
+    <h2 class="section-title">🖼️ Django Admin Panel Screenshots</h2>
+    <div class="row">
+      <div class="col-md-6 img-card"><img src="assets/django_admin_contactus.JPG" alt="Django Admin Contact"></div>
+    </div>
 
+    <h2 class="section-title">🖼️ Project Screenshots</h2>
+    <div class="row">
+      <div class="col-md-6 img-card"><img src="assets/home_page.JPG" alt="Homepage"></div>
+      <div class="col-md-6 img-card"><img src="assets/home_page_2.JPG" alt="Homepage 2"></div>
+      <div class="col-md-6 img-card"><img src="assets/navbar.JPG" alt="Navbar"></div>
+      <div class="col-md-6 img-card"><img src="assets/footer.JPG" alt="Footer"></div>
+      <div class="col-md-6 img-card"><img src="assets/contact_us.JPG" alt="Contact Page"></div>
+    </div>
 
-    <h2>🖼️ Django Admin Panel Screenshots</h2>
-<img src="assets/django_admin_contactus.JPG" alt="Homepage Screenshot">
-
-    <h2>🖼️ Project Screenshots</h2>
-<img src="assets/home_page.JPG" alt="Homepage Screenshot">
-<img src="assets/home_page_2.JPG" alt="Homepage Screenshot">
-<img src="assets/navbar.JPG" alt="Navbar Screenshot">
-<img src="assets/footer.JPG" alt="Footer Screenshot">
-<img src="assets/contact_us.JPG" alt="Navbar Screenshot">
-
-    <p class="mt-4 text-muted small text-center">© 2025 Umesha Ravihari</p>
+    <footer>
+      © 2025 Umesha Ravihari
+    </footer>
   </div>
+
 </body>
 </html>
